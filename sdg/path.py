@@ -60,6 +60,10 @@ def input_path(inid=None, ftype='data', src_dir='', must_work=False):
         path = os.path.join(src_dir, 'meta')
         if inid is not None:
             path = os.path.join(path, inid + '.md')
+    elif ftype == 'data-wide':
+        path = os.path.join(src_dir, 'data-wide')
+        if inid is not None:
+            path = os.path.join(path, inid + '.md')
     
     return path
 
