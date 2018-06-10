@@ -48,7 +48,7 @@ def input_path(inid=None, ftype='data', src_dir='', must_work=False):
             found.
     """
 
-    expected_ftypes = ['data', 'meta']
+    expected_ftypes = ['data', 'meta', 'data-wide']
     if ftype not in expected_ftypes:
         raise ValueError("ftype must be on of: " + ", ".join(expected_ftypes))
 
@@ -58,6 +58,10 @@ def input_path(inid=None, ftype='data', src_dir='', must_work=False):
             path = os.path.join(path, 'indicator_' + inid + '.csv')
     elif ftype == 'meta':
         path = os.path.join(src_dir, 'meta')
+        if inid is not None:
+            path = os.path.join(path, inid + '.md')
+    elif ftype == 'data-wide':
+        path = os.path.join(src_dir, 'data-wide')
         if inid is not None:
             path = os.path.join(path, inid + '.md')
     
