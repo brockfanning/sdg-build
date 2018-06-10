@@ -66,7 +66,7 @@ def get_git_updates(inid, src_dir=''):
         A dict with the required metadata fields
     """
     meta_update = get_git_update(inid=inid, ftype='meta', src_dir=src_dir)
-    data_update = get_git_update(inid=inid, ftype='data', src_dir=src_dir)
+    data_update = get_git_update(inid=inid, ftype='data-wide', src_dir=src_dir)
     
     return {'national_data_update_url_text': data_update['date'] + ': see changes on GitHub',
             'national_data_update_url': data_update['commit_url'],
