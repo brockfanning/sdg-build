@@ -48,7 +48,7 @@ def input_path(inid=None, ftype='data', src_dir='', must_work=False):
             found.
     """
 
-    expected_ftypes = ['data', 'meta']
+    expected_ftypes = ['data', 'meta', 'data-wide']
     if ftype not in expected_ftypes:
         raise ValueError("ftype must be on of: " + ", ".join(expected_ftypes))
 
