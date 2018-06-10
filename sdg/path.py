@@ -63,7 +63,7 @@ def input_path(inid=None, ftype='data', src_dir='', must_work=False):
     elif ftype == 'data-wide':
         path = os.path.join(src_dir, 'data-wide')
         if inid is not None:
-            path = os.path.join(path, inid + '.md')
+            path = os.path.join(path, 'indicator_' + inid + '.csv')
     
     return path
 
